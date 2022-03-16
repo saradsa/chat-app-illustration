@@ -6,12 +6,23 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 #main {
-  max-height: 100vh;
-  max-width: 100vw;
+  height: 100vh;
+  width: 100vw;
   background-color: #fafafa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
 }
 
 #main::before {
@@ -25,6 +36,7 @@
   background: -webkit-gradient(linear, left top, left bottom, from(#e942ff), color-stop(85%, #8838ff));
   background: linear-gradient(180deg, #e942ff 0%, #8838ff 85%);
   border-radius: 0% 0% 50% 50%;
+  z-index: 0;
 }
 
 #main::after {
@@ -37,5 +49,239 @@
   background: #f7f5fa;
   background: linear-gradient(217deg, #f7f5fa 0%, #f9f4fa 56%);
   border-radius: 50% 50% 0% 0%;
+  z-index: 0;
+}
+
+#main #content {
+  height: 85vh;
+  width: 70%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 45% 45%;
+      grid-template-columns: 45% 45%;
+  grid-column-gap: 5%;
+  z-index: 1;
+}
+
+#main #content #phone {
+  background: #fff;
+  height: 74vh;
+  width: 38vh;
+  -webkit-box-shadow: 11px 3px 28px -9px rgba(0, 0, 0, 0.75);
+          box-shadow: 11px 3px 28px -9px rgba(0, 0, 0, 0.75);
+  border-radius: 2em;
+  margin: auto auto;
+  position: relative;
+}
+
+#main #content #phone::before {
+  content: "";
+  position: absolute;
+  top: -0.3%;
+  left: 25%;
+  width: 50%;
+  height: 6%;
+  background-color: white;
+  color: blue;
+  z-index: 2;
+  border-radius: 1em;
+}
+
+#main #content #phone #app-back {
+  background: #f5f3f7;
+  height: 100%;
+  border-radius: 1.5em;
+}
+
+#main #content #phone #app-back #sub-heading {
+  height: 15%;
+  width: 100%;
+  background: #8838ff;
+  background: -webkit-gradient(linear, left top, right top, color-stop(18%, #8838ff), color-stop(97%, #e942ff));
+  background: linear-gradient(90deg, #8838ff 18%, #e942ff 97%);
+  border-radius: 0 0 0.3em 0.3em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% 20% 60% 10%;
+      grid-template-columns: 10% 20% 60% 10%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -webkit-box-shadow: -4px 11px 28px -20px rgba(0, 0, 0, 0.75);
+          box-shadow: -4px 11px 28px -20px rgba(0, 0, 0, 0.75);
+}
+
+#main #content #phone #app-back #sub-heading .chevron {
+  color: #fafafa;
+}
+
+#main #content #phone #app-back #sub-heading .ellipse {
+  color: #fafafa;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  font-size: 0.8em;
+}
+
+#main #content #phone #app-back #sub-heading #avatar {
+  border-radius: 50%;
+  height: 50%;
+  width: 60%;
+  border: 0.1em solid #fafafa;
+}
+
+#main #content #phone #app-back #sub-heading #desc {
+  margin-left: -5%;
+}
+
+#main #content #phone #app-back #sub-heading #desc h4 {
+  color: #fafafa;
+  font-size: 0.8em;
+  letter-spacing: 0.05em;
+}
+
+#main #content #phone #app-back #sub-heading #desc p {
+  color: #d89eff;
+  font-size: 0.5em;
+  margin-top: -5%;
+  margin-bottom: 0%;
+}
+
+#main #content #phone #app-back #chat-area {
+  font-size: 0.5em;
+}
+
+#main #content #phone #app-back #chat-area .left-chat {
+  background-color: #ede5f4;
+  max-width: 55%;
+  color: #9241c8;
+  border-radius: 1em 1em 1em 0.3em;
+}
+
+#main #content #phone #app-back #chat-area .right-chat {
+  background-color: #ffffff;
+  max-width: 50%;
+  color: #6e5d7e;
+  border-radius: 1em 1em 0.3em 1em;
+  margin: 0.5rem 0.5rem 0.5rem 6.8rem;
+  -webkit-box-shadow: 0px 1px 9px -5px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 1px 9px -5px rgba(0, 0, 0, 0.75);
+}
+
+#main #content #phone #app-back #chat-area .image img {
+  width: 18%;
+  height: 18%;
+  border-radius: 0.5em;
+}
+
+#main #content #phone #app-back #chat-area .radio {
+  width: 65%;
+  color: #e7d3f3;
+  background: #e942ff;
+  background: -webkit-gradient(linear, left top, right top, color-stop(15%, #e942ff), color-stop(96%, #8838ff));
+  background: linear-gradient(90deg, #e942ff 15%, #8838ff 96%);
+  border-radius: 1em 1em 1em 1em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% 65% 20%;
+      grid-template-columns: 10% 65% 20%;
+}
+
+#main #content #phone #app-back #chat-area .radio .custom {
+  width: 100%;
+  height: 80%;
+  border: 2px solid #e570ff;
+  border-radius: 2em;
+}
+
+#main #content #phone #app-back #chat-area .radio .custom input {
+  display: none;
+}
+
+#main #content #phone #app-back #chat-area .radio p {
+  margin: auto 1em;
+  font-size: 1.2em;
+}
+
+#main #content #phone #app-back #chat-area .radio span {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.1em;
+}
+
+#main #content #phone #app-back #chat-area .submit {
+  background: white;
+  border-radius: 1.2em;
+  height: 5vh;
+  width: 93%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 78% 10%;
+      grid-template-columns: 78% 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-column-gap: 10%;
+}
+
+#main #content #phone #app-back #chat-area .submit p {
+  color: #c6cacd;
+  margin: auto 1em;
+  font-size: 1.3em;
+}
+
+#main #content #phone #app-back #chat-area .submit .enter {
+  height: 95%;
+  width: 110%;
+  border-radius: 50%;
+  color: white;
+  background-color: #3e2753;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main #content #phone #app-back #chat-area .submit .enter i {
+  margin: auto;
+}
+
+#main #content #detail {
+  margin: auto;
+}
+
+#main #content #detail h1 {
+  color: #3e2753;
+}
+
+#main #content #detail p {
+  color: #a39daa;
+}
+
+@media screen and (max-width: 375px) {
+  * {
+    overflow-y: scroll;
+  }
+  #main {
+    display: 200vh;
+  }
+  #main::before {
+    left: -7em;
+    width: 90vw;
+  }
+  #main::after {
+    right: -7em;
+    width: 90vw;
+  }
+  #main #content {
+    height: 65vh;
+    width: 90%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
